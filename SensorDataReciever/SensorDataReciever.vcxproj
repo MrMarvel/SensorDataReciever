@@ -19,7 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DatagramSocket-master\DatagramSocket.cpp" />
     <ClCompile Include="SensorDataReciever.cpp" />
+    <ClCompile Include="Thread-master\Thread.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DatagramSocket-master\DatagramSocket.h" />
+    <ClInclude Include="Thread-master\Thread.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
