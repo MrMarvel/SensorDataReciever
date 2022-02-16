@@ -8,9 +8,19 @@ using namespace std;
 using namespace nlohmann;
 
 struct SensorData {
-	float azimuth = 0;
-	float pitch = 0;
-	float roll = 0;
+	float gyro_azimuth = 0;
+	float gyro_pitch = 0;
+	float gyro_roll = 0;
+	float gyro_freq = 0;
+
+	float accel_x = 0;
+	float accel_y = 0;
+	float accel_z = 0;
+	float accel_freq = 0;
+
+	long timestamp = 0;
+
+	int calibrate = 0;
 };
 typedef void (*f_callback) (SensorData);
 
@@ -52,9 +62,14 @@ private:
 			//cout << string().assign(4000, ' ');
 			//SetConsoleCursorPosition(handle, { 0, 0 });
 			//cout << js.dump(4) << endl;
-			sd.azimuth = js.at("gyro_azimuth");
-			sd.pitch = js.at("gyro_pitch");
-			sd.roll = js.at("gyro_roll");
+			sd.gyro_azimuth = js.at("gyro_azimuth");
+			sd.gyro_pitch = js.at("gyro_pitch");
+			sd.gyro_roll = js.at("gyro_roll");
+			sd.gyro_freq = js.at("gyro_freq");
+			sd.accel_x = js.at("accel_x");
+			sd.accel_y = js.at("accel_y");
+			sd.accel_z = js.at("accel_z");
+			sd.accel_freq = js.at("accel_freq");
 		} catch (exception e) {
 			//cout << "Exception " << e.what();
 			isException = true;
