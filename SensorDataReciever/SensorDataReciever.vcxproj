@@ -24,6 +24,7 @@
     <ClCompile Include="Thread-master\Thread.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\json-master\json.hpp" />
     <ClInclude Include="DatagramSocket-master\DatagramSocket.h" />
     <ClInclude Include="Thread-master\Thread.h" />
   </ItemGroup>
